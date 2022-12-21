@@ -17,5 +17,10 @@ pipeline{
 									sh "systemctl start httpd"
 									}
 								}
-							}
+					stage('stage-3'){
+						steps{
+							sh "echo "HIII GUYS"
 						}
+					}
+				}
+}
