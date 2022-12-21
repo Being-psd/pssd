@@ -6,14 +6,15 @@ pipeline{
 					}
 				}
 				stages{
-						stage('stage-1'){
+						stage('deploy'){
 								steps{
-									sh "mkdir test"
+									sh "cp -r index.html /var/www/html/"
+									sh "chmod -R 777 /var/www/html"
 									}
 								}
 						stage('stage-2'){
 								steps{
-									sh "mkdir folder1"
+									sh "systemctl start httpd"
 									}
 								}
 							}
