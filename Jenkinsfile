@@ -19,7 +19,7 @@ pipeline{
 								}
 					stage('stage-3'){
 						steps{
-							sh "echo "HIII GUYS"
+							sleep 20
 						}
 					}
 				}
